@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contáctanos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de Mí</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <form action="#" name="formulario" id="formulario" method="post" >
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+                <input type="submit" value="Aceptar"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Aceptar"><br>
+                Email: <input type="email" name="mail" id="mail">
+                <input type="submit" value="Aceptar"><br><br>
+                Edad; <input type="number" name="edad" id="edad" min="18" max="100">
+                <input type="submit" value="Aceptar">br><br>
+                Buscar: <input type="search" name="buscar" id="buscar"><br><br>
+                URL: <input type="url" name="URL" id="URL"><br><br>
+                Edad: <input type="number" name="edad" id="edad" min="0" max="100" step="5" placeholder="Introduce edad"><br><br>
+                Rango: <input type="range" min="0" max="100" step="5"><br><br>
+                Fecha: <input type="date" name="fecha" id="fecha"><br><br>
+                Hora: <input type="time" name="hora" id="hora" required><br><br>
+                Código postal: <input pattern="(0- 9){5}" placeholder="5 dígitos" br><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Mi Proyecto Web. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

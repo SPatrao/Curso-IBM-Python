@@ -1,0 +1,53 @@
+/* Estilos generales para el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    style="list-style-type:square"
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Estilos para el main */
+
+
+/* Estilos para la sección del footer */
+main {
+    margin: 2em;
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: rgb(92, 101, 189);
+    /* Añadir imagen de fondo al footer */
+    background-image: url('../img/patinaje.jpg');
+    background-size: cover; /* Para ajustar la imagen al tamaño del elemento */
+    background-position: center; /* Centra la imagen en el footer */
+}

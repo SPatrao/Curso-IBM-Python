@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de JavaScript - Conceptos Básicos</title>
+    <script>
+        var nombre = "Angel";
+        var apellido = "Roman";
+        document.write("<h1>Tu nombre es</h1>" + nombre + " " + apellido);
+    </script>
+</head>
+<body>
+    <h1>Introducción a JavaScript</h1>
+
+    <!-- Salida de datos al BODY de mi página -->
+    <script>
+        document.write("<h1>Esto es un H1 puesto desde JavaScript</h1>");
+    </script>
+
+    <!-- Ejemplo 1: Uso de alert() -->
+    <script>
+        // Mostramos un mensaje emergente en la página
+        alert("¡Hola! Bienvenido a JavaScript");
+    </script>
+    
+    <!-- Ejemplo 2: Uso de console.log() -->
+    <script>
+        // Imprime un mensaje en la consola del navegador
+        console.log("Este es un mensaje en la consola");
+    </script>
+    
+    <!-- Ejemplo 3: Entrada y salida de datos -->
+    <script>
+        // Solicita un dato al usuario y lo muestra en pantalla
+        var nombre = prompt("¿Cómo te llamas?");
+        alert("Hola, " + nombre + "!");
+    </script>
+    
+    <!-- Ejemplo 4: Manipulación del DOM -->
+    <p id="mensaje">Este texto será cambiado con JavaScript</p>
+    <script>
+        // Cambia el contenido de un elemento HTML con JavaScript
+        document.getElementById("mensaje").innerText = "¡Texto cambiado con JavaScript!";
+    </script>
+    
+    <!-- Ejemplo 5: Uso de variables y operadores -->
+    <script>
+        var numero1 = 10;
+        var numero2 = 5;
+        var suma = numero1 + numero2;
+        console.log("La suma de " + numero1 + " y " + numero2 + " es " + suma);
+    </script>
+    
+    <!-- Ejemplo 6: Condiciones con if-else -->
+    <script>
+        var edad = prompt("Introduce tu edad:");
+        if (edad >= 18) {
+            alert("Eres mayor de edad");
+        } else {
+            alert("Eres menor de edad");
+        }
+    </script>
+    
+    <!-- Ejemplo 7: Bucle for -->
+    <script>
+        for (var i = 1; i <= 5; i++) {
+            console.log("Este es el mensaje número " + i);
+        }
+    </script>
+    
+</body>
+</html>

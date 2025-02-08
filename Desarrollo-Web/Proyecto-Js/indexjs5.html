@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de JavaScript - Métodos de Inclusión</title>
+    
+    <!-- Método 1: Script en el <head> (se ejecuta antes de que cargue el DOM) -->
+    <script>
+        console.log("Este script se ejecuta en el <head>");
+    </script>
+
+    <script>
+        var articulos = ["balon", "botas", "camiseta", "pantalon"];
+    </script>
+    
+
+    <!-- Enlace a un archivo JavaScript externo -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Introducción a JavaScript</h1>
+    
+    <!-- Método 2: Script dentro del <body> -->
+    <script>
+        alert("Este script está dentro del <body>");
+    </script>
+    
+    <!-- Ejemplo 1: Uso de alert() -->
+    <script>
+        alert("¡Hola! Bienvenido a JavaScript");
+    </script>
+    
+    <!-- Ejemplo 2: Uso de console.log() -->
+    <script>
+        console.log("Este es un mensaje en la consola");
+    </script>
+    
+    <!-- Ejemplo 3: Entrada y salida de datos -->
+    <script>
+        var nombre = prompt("¿Cómo te llamas?");
+        alert("Hola, " + nombre + "!");
+    </script>
+    
+    <!-- Ejemplo 4: Manipulación del DOM -->
+    <p id="mensaje">Este texto será cambiado con JavaScript</p>
+    <script>
+        document.getElementById("mensaje").innerText = "¡Texto cambiado con JavaScript!";
+    </script>
+    
+    <!-- Ejemplo 5: Uso de variables y operadores -->
+    <script>
+        var numero1 = 10;
+        var numero2 = 5;
+        var suma = numero1 + numero2;
+        console.log(`La suma de ${numero1} y ${numero2} es ${suma}`);
+    </script>
+    
+    <!-- Ejemplo 6: Condiciones con if-else -->
+    <script>
+        var edad = prompt("Introduce tu edad:");
+        if (edad >= 18) {
+            alert("Eres mayor de edad");
+        } else {
+            alert("Eres menor de edad");
+        }
+    </script>
+    
+    <!-- Ejemplo 7: Bucle for -->
+    <script>
+        for (var i = 1; i <= 5; i++) {
+            console.log(`Este es el mensaje número ${i}`);
+        }
+    </script>
+    
+    <!-- Ejemplo 8: Funciones -->
+    <script>
+        function saludar(nombre) {
+            return `Hola, ${nombre}!`;
+        }
+        console.log(saludar("Carlos"));
+    </script>
+    
+    <!-- Ejemplo 9: Arrays -->
+    <script>
+        var frutas = ["Manzana", "Banana", "Naranja"];
+        console.log(`Lista de frutas: ${frutas.join(", ")}`);
+    </script>
+    
+    <!-- Ejemplo 10: Métodos de Strings -->
+    <script>
+        let texto = "JavaScript es genial";
+        console.log(texto.toUpperCase()); // Convertir a mayúsculas
+        console.log(texto.toLowerCase()); // Convertir a minúsculas
+        console.log(`La longitud del texto es: ${texto.length}`);
+        console.log(`La palabra 'genial' empieza en la posición: ${texto.indexOf("genial")}`);
+    </script>
+    
+    <!-- Ejemplo 11: Eventos -->
+    <button id="miBoton">Haz clic aquí</button>
+    <script>
+        document.getElementById("miBoton").addEventListener("click", function() {
+            alert("¡Botón clickeado!");
+        });
+    </script>
+    
+    <!-- Ejemplo 12: Objetos -->
+    <script>
+        var persona = {
+            nombre: "Juan",
+            edad: 25,
+            ciudad: "Madrid"
+        };
+        console.log(`Nombre: ${persona.nombre}, Edad: ${persona.edad}`);
+    </script>
+    
+    <!-- Ejemplo 13: Uso de setTimeout -->
+    <script>
+        setTimeout(function() {
+            console.log("Este mensaje aparece después de 3 segundos");
+        }, 3000);
+    </script>
+
+   <!-- Funciones de los arrays -->
+    <script>
+        // Muestra el primer artículo del array
+        document.write("<p>El primer artículo es <strong>" + articulos[0] + "</strong></p>");
+
+        // Muestra la longitud actual del array
+        document.write("<p>La longitud del array es " + articulos.length + "</p>");
+
+        // Muestra el último artículo del array usando articulos.length - 1
+        document.write("<p>El último artículo es <strong>" + articulos[articulos.length - 1] + "</strong></p>");
+
+        // Añade "pelota" al inicio del array con unshift()
+        articulos.unshift("pelota");
+
+        // Añade "canasta" al final del array con push()
+        articulos.push("canasta");
+
+        // Muestra el nuevo primer artículo después de añadir "pelota"
+        document.write("<p>Añadimos el artículo <strong>" + articulos[0] + "</strong></p>");
+
+        // Muestra el primer artículo actualizado
+        document.write("<p>El primer artículo ahora es <strong>" + articulos[0] + "</strong></p>");
+
+        // Muestra el último artículo actualizado después de añadir "canasta"
+        document.write("<p>El último artículo ahora es <strong>" + articulos[articulos.length - 1] + "</strong></p>");
+
+        // Muestra la nueva longitud del array después de agregar elementos
+        document.write("<p>La longitud del array ahora es " + articulos.length + "</p>");
+
+        // Muestra el contenido completo del array
+        document.write("<p>Array completo: " + articulos.join(", ") + "</p>");
+
+        // Solicita al usuario que introduzca un nuevo artículo y lo agrega al final del array
+        articulos.push(prompt("Introduce un nuevo artículo"));
+
+        // Muestra el array actualizado con el nuevo artículo ingresado por el usuario
+        document.write("<br>");
+        document.write("<p>Array actualizado: " + articulos.join(", ") + "</p>");
+    </script>
+</body>
+</html>
