@@ -1,0 +1,65 @@
+#titulo {
+    font-size: 24px;
+    background-color: coral;
+    
+    /* Gradiente corregido */
+    background: linear-gradient(to bottom, blue, rgb(124, 210, 212));
+    background: -webkit-linear-gradient(to bottom, blue, rgb(124, 210, 212));
+    background: -ms-linear-gradient(to bottom, blue, rgb(124, 210, 212));
+    background: -o-linear-gradient(to bottom, blue, rgb(124, 210, 212));
+
+    width: 50%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    
+    margin: 40px auto;
+    padding: 15px;
+    color: white;
+
+    /* Box shadow corregido */
+    box-shadow: 50px 50px 15px grey;
+}
+/* Selector por etiqueta: aplica a todos los <p> */
+p {
+    color: blue;
+}
+
+/* Selector por clase: aplica a todos los elementos con class="destacado" */
+.destacado {
+    font-weight: bold;
+    background-color: yellow;
+}
+
+/* Selector universal: aplica a todos los elementos de la página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Selector de hijo directo: aplica a los <p> que sean hijos directos de <div class="contenedor"> */
+.contenedor > p {
+    color: green;
+}
+
+/* Selector de descendiente: aplica a todos los <span> dentro de un <div> */
+div span {
+    color: purple;
+}
+
+/* Selector de hermano adyacente: aplica al primer <p> que siga a un <h2> */
+h2 + p {
+    font-style: italic;
+}
+
+/* Selector de hermanos generales: aplica a todos los <p> que estén después de un <h2> */
+h2 ~ p {
+    text-decoration: underline;
+}
+
+/* Selector de atributo: aplica a cualquier input con type="text" */
+input[type="text"] {
+    border: 2px solid blue;
+}

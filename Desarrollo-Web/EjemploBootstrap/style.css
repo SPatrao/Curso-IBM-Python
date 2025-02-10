@@ -1,0 +1,32 @@
+/* Estilos generales para el carrusel */
+.carousel {
+    max-width: 900px; /* Define un ancho máximo para el carrusel */
+    margin: auto; /* Centra el carrusel en la página */
+}
+
+/* Asegurar que todas las imágenes tengan el mismo tamaño */
+.carousel-item img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 500px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+}
+
+/* Estilos para los textos en el carrusel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-caption h3 {
+    font-size: 20px;
+    color: white; /* Asegura que el texto sea legible */
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Hace visibles los controles */
+    border-radius: 50%;
+    padding: 10px;
+}
