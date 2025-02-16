@@ -13,7 +13,7 @@ while True:  # Este bucle se ejecutará indefinidamente porque la condición sie
         break  # Sale del bucle
     print("Número ingresado:", entrada)  # Imprime el número ingresado
 
-# 3. Bucle for con range: ejecuta un bucle un número determinado de veces.
+# 3. Bucle for con range: ejecuta un bucle un n1úmero determinado de veces.
 for i in range(5):  # El rango va de 0 a 4 (5 no está incluido)
     print(i)  # Imprime los números 0, 1, 2, 3, 4
 
