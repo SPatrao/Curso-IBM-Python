@@ -12,7 +12,7 @@ else:  # Si la condición anterior es falsa
     print("No puedes votar")  # Se ejecuta esta línea si la condición es falsa
 
 # 3. If-elif-else: se usa cuando necesitamos evaluar múltiples condiciones.
-nota = 85
+nota = int(input("🔹 Ingresa tu nota: "))
 if nota >= 90:  # Si la nota es mayor o igual a 90
     calificacion = "A"  # Asignamos la calificación A
 elif nota >= 80:  # Si la nota no es mayor o igual a 90, pero es mayor o igual a 80

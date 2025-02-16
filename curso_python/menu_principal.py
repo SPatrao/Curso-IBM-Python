@@ -7,16 +7,56 @@ import importlib.util  # Herramientas auxiliares para gestionar la importación 
 # Cada categoría (clave) tiene una lista de archivos (valores) que representan los módulos disponibles.
 MODULOS = {
     '01_introduccion': [
-        '01_variables.py',  # Módulo que cubre las variables en Python.
-        '02_tipos_datos.py',  # Módulo que cubre los tipos de datos en Python.
-        '03_operadores.py'  # Módulo que cubre los operadores en Python.
+        '01_variables.py',
+        '02_tipos_datos.py', 
+        '03_operadores.py'
     ],
     '02_estructuras_control': [
-        '01_condicionales.py',  # Módulo que cubre estructuras de control condicional (if, else).
-        '02_bucles.py',  # Módulo que cubre los bucles (for, while).
-        '03_excepciones.py'  # Módulo que cubre el manejo de excepciones.
+        '01_condicionales.py',
+        '02_bucles.py', 
+        '03_excepciones.py'
     ],
-    # Otras categorías y módulos siguen una estructura similar.
+    '03_funciones': [
+        '01_definicion.py',
+        '02_argumentos.py',
+        '03_lambda.py'
+    ],
+    '04_estructura_datos': [
+        '01_listas.py',
+        '02_tuplas.py',
+        '03_diccionarios.py', 
+        '04_sets.py'
+    ],
+    '05_poo': [
+        '01_clases.py',
+        '02_herencia.py',
+        '03_polimorfismo.py'
+    ],
+    '06_modulos': [
+        '01_modulos_nativos.py',
+        '02_modulos_propios.py'
+    ],
+    '07_manejo_archivos': [
+        'lectura_escritura.py',
+        'csv_handler.py',
+        'json_handler.py'
+    ],
+    '08_excepciones_personalizadas': [
+        'custom_exceptions.py',
+        'error_handling.py'
+    ],
+    '09_decoradores': [
+        'basic_decorators.py',
+        'advanced_decorators.py'
+    ],
+    '10_generadores': [
+        'generadores_basicos.py',
+        'generadores_avanzados.py'
+    ],
+    '11_programacion_funcional': [
+        'map_filter_reduce.py',
+        'funciones_orden_superior.py'
+    ]
 }
 
 def limpiar_pantalla():
