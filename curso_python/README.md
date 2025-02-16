@@ -29,3 +29,5 @@ Este curso cubre desde conceptos básicos hasta programación orientada a objeto
 1. Iniciar con 00_introduccion
 2. Seguir orden numérico de carpetas
 
+## Ejecucion de Pruebas
+1. Ejecutar menu_principal.py en la raiz del Proyecto.
