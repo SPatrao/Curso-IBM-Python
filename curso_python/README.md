@@ -31,3 +31,10 @@ Este curso cubre desde conceptos básicos hasta programación orientada a objeto
 
 ## Ejecucion de Pruebas
 1. Ejecutar menu_principal.py en la raiz del Proyecto.
+
+## Incluido un seguimiento de Temario Estudiado
+1. Ejecutar menu_principal.py 
+2. Opcion 2. Ver mi progreso
+
+## Certificado de finalizacion curso
+1. Se genera automaticamente al terminar el 100% de temario.

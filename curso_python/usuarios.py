@@ -1,1 +1,1 @@
-PROGRESO_USUARIOS = {'Angel': {'01_introduccion': True, '02_estructuras_control': True, '03_funciones': True, '04_estructura_datos': True, '05_poo': True, '06_modulos': True, '07_manejo_archivos': True, '08_excepciones_personalizadas': True, '09_decoradores': True, '10_generadores': True, '11_programacion_funcional': True}}
+PROGRESO_USUARIOS = {}
