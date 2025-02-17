@@ -38,13 +38,17 @@ else:  # Si no hay excepción (el usuario ingresa un número válido), ejecutamo
 
 # 5. Bloque finally
 # El bloque 'finally' se ejecuta siempre, sin importar si hubo o no una excepción en el bloque 'try'.
+archivo = None  # Definimos la variable archivo antes del bloque try-except-finally
+archivo_abierto = False  # Bandera para indicar si el archivo se ha abierto
 try:
     archivo = open("ejemplo.txt", "r")  # Intentamos abrir un archivo
+    archivo_abierto = True  # Establecemos la bandera a True si el archivo se abre correctamente
     # Aquí irían operaciones con el archivo, pero si no se encuentra el archivo, genera un error.
 except FileNotFoundError:  # Si el archivo no existe, capturamos el error
     print("El archivo no existe")
 finally:  # Este bloque se ejecuta siempre, incluso si hubo un error o no
-    archivo.close()  # Cerramos el archivo, asegurándonos de que no quede abierto, aunque no exista.
+    if archivo_abierto:  # Verificamos si el archivo se ha abierto correctamente
+        archivo.close()  # Cerramos el archivo
 
 # 6. Lanzar excepciones propias
 # Podemos crear nuestras propias excepciones usando la palabra clave 'raise'.
@@ -58,6 +62,8 @@ try:
 except ValueError as error:  # Capturamos el 'ValueError' lanzado
     print(error)  # Mostramos el mensaje del error: "No se puede dividir por cero"
 
+
+
 # 7. Crear excepciones personalizadas
 # Podemos crear nuestras propias excepciones definidas por el usuario. Para ello, heredamos de la clase 'Exception'.
 class MiExcepcionPersonalizada(Exception):
@@ -65,8 +71,18 @@ class MiExcepcionPersonalizada(Exception):
         self.mensaje = mensaje  # Asignamos el mensaje recibido como atributo
         super().__init__(self.mensaje)  # Llamamos al constructor de la clase base 'Exception' para asegurarnos de que se maneje correctamente.
 
+while True:
+    try:
+        edad = int(input("🔹 Ingresa tu edad: "))
+        if edad < 0:
+            raise MiExcepcionPersonalizada("La edad no puede ser negativa")
+        break
+    except ValueError:
+        print("Entrada inválida. Debes ingresar un número.")
+    except MiExcepcionPersonalizada as error:
+        print(error)
+
 try:
-    edad = -5  # Definimos una edad negativa, lo que es un error lógico
     if edad < 0:  # Si la edad es negativa, lanzamos una excepción personalizada
         raise MiExcepcionPersonalizada("La edad no puede ser negativa")  # Lanzamos la excepción con un mensaje personalizado
 except MiExcepcionPersonalizada as error:  # Capturamos nuestra excepción personalizada
