@@ -3,7 +3,7 @@
 # Guía completa de declaración y uso
 
 # Introducción a los tipos básicos de variables
-print("\n📌 TIPOS BÁSICOS DE VARIABLES")
+print("\n📌 U+1F4CC :pushpin:  TIPOS BÁSICOS DE VARIABLES")
 
 # **Enteros (int)**: Son números enteros, positivos o negativos.
 print("\n🔹 Variables de tipo entero (int):")
