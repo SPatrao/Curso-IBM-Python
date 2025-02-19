@@ -1,5 +1,115 @@
+# Archivos y carpetas específicos del sistema
+.DS_Store
+Thumbs.db
 
-    venv/
-    __pycache__/
-    .ipynb_checkpoints/
-    
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Archivos de distribución / empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Archivos de PyInstaller
+*.manifest
+*.spec
+
+# Logs y bases de datos
+*.log
+*.sqlite
+
+# Carpetas de pruebas y cobertura
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints
+
+# Archivos específicos de pyenv
+.python-version
+
+# Archivos de ambiente de celery
+celerybeat-schedule
+celerybeat.pid
+
+# Archivos de SageMath parsed
+*.sage.py
+
+# Archivos de ambiente
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Archivos de Spyder project
+.spyderproject
+.spyproject
+
+# Archivos de Rope project
+.ropeproject
+
+# Documentación de mkdocs
+/site
+
+# mypy
+.mypy_cache/
+
+# Archivos específicos de PyCharm
+.idea/
+
+# Archivos específicos de VSCode
+.vscode/
+
+# Archivos de datos generados
+data/prepared_skyrim_data.csv
+data/skyrim_data_clean.csv
+data/skyrim_books_prepared.csv
+
+# Archivos de índice FAISS
+*.index
+
+# Archivos de modelo
+*.pkl
+*.h5
+*.model
+
+# Archivos grandes (ajusta según sea necesario)
+*.csv
+*.json
+
+# Streamlit
+.streamlit/
+
+# Otros archivos temporales o de caché
+*.tmp
+*.bak
+*.swp
+*~
