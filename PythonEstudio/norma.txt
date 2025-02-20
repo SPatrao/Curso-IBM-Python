@@ -1,0 +1,11 @@
+PROMPT:
+
+*"Revisa y mejora este código Python para convertirlo en una guía de estudio completa y profesional. Asegúrate de:
+
+Comentarios descriptivos: Explica cada función, método, argumento y concepto utilizado.
+Ejemplos claros y aplicables: Usa casos prácticos con salida esperada.
+Buenas prácticas: Código limpio, eficiente, con f-strings y ejemplos relevantes al tema y que haga uso de todos o los mas usos mas normales y conocidos. 
+Explicaciones completas: Proporciona contexto, usos y detalles técnicos para que el archivo sea una referencia autosuficiente.
+Ejercicios finales: Agrega preguntas y desafíos para reforzar el aprendizaje.
+Glosario: Define términos clave utilizados en el código.
+Mantén una estructura lógica, comentarios explicativos y un formato profesional."*
