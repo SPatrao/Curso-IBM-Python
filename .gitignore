@@ -25,5 +25,4 @@ __pycache__/
 # Archivos de configuración locales
 .env
 *.log
-*.txt
 
