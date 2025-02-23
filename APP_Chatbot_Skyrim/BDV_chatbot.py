@@ -54,6 +54,10 @@ if opcion == "Chat con IA":
         "Selecciona la fuente de búsqueda:",
         ("Solo en la base de datos", "Buscar en internet también")
     )
+    tipo_buscada = st.radio(
+        "Selecciona el tipo de búsqueda:",
+        ("Normal", "Con Score")
+    )
     
     if st.button("Enviar"):
         if consulta:
@@ -65,9 +69,16 @@ if opcion == "Chat con IA":
                 st.write(respuesta)
             else:
                 # Buscar solo en la base de datos vectorial
-                results = db.similarity_search(consulta, k=3)
-                contexto = "\n".join([r.metadata.get("descripcion", "Sin contexto relevante") for r in results]) if results else "Sin contexto relevante"
-                
+                if tipo_buscada == "Normal":
+                    # Realizar la búsqueda de similitud normal
+                    results = db.similarity_search(consulta, k=3)  
+                    contexto = "\n".join([r.metadata.get("descripcion", "Sin contexto relevante") for r in results]) if results else "Sin contexto relevante"
+                else:
+                    # Realizar la búsqueda de similitud con puntuaciones
+                    results = db.similarity_search_with_score(consulta, k=3) 
+                    # Aquí se espera que los resultados sean tuplas, así que lo manejamos en consecuencia
+                    contexto = "\n".join([r[0].metadata.get("descripcion", "Sin contexto relevante") for r in results]) if results else "Sin contexto relevante"
+                    
                 # Enviar la consulta y contexto a LM Studio (solo con la base de datos)
                 prompt = f"Pregunta: {consulta}\nContexto: {contexto}\nRespuesta:"
                 respuesta = generar_respuesta(prompt)
