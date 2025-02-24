@@ -33,42 +33,29 @@ class Libro:
         estado = 'Disponible' if self.disponible else 'No disponible'
         return f'{self.titulo} - Autor: {self.autor} - ISBN: {self.isbn} - Estado: {estado}'
 
-    def agregar(self, titulo, autor, isbn):
-        self.titulo = titulo
-        self.autor = autor
-        self.isbn = isbn
-        self.disponible = True
-        print(f'Libro "{self.titulo}" agregado con éxito (ISBN: {self.isbn}).')
+    def agregar():
+        """Método estático para solicitar datos de un nuevo libro y validarlos."""
+        titulo = input("Título: ").strip()
+        autor = input("Autor: ").strip()
+        while True:
+            isbn = input("ISBN (mínimo 4 dígitos): ").strip()
+            if len(isbn) >= 4 and isbn.isdigit():
+                break
+            print("Error: El ISBN debe contener al menos 4 dígitos numéricos.")
+        
+        return Libro(titulo, autor, isbn)
 
 class Biblioteca:
     def __init__(self):
-        self.libros = {}
-        self.isbn_counter = 100000000  
+        self.libros = {} 
 
-    def generar_isbn_continuo(self):
-        while str(self.isbn_counter) in self.libros:
-            self.isbn_counter += 1  
-        return str(self.isbn_counter)
-
-    def validar_isbn(self, isbn):
-        return isbn.isdigit() and len(isbn) == 10
-
-    def agregar_libro(self, titulo, autor, isbn=None):
-        if not isbn:
-            isbn = self.generar_isbn_continuo()
-            print(f"ISBN generado automáticamente: {isbn}")
-
-        elif not self.validar_isbn(isbn):
-            print("El ISBN debe ser un número de 10 dígitos.")
+    def agregar_libro(self):
+        nuevo_libro = Libro.agregar()
+        if nuevo_libro.isbn in self.libros:
+            print(f"El libro con ISBN {nuevo_libro.isbn} ya está en la biblioteca.")
             return
-
-        if isbn in self.libros:
-            print(f"El libro con ISBN {isbn} ya está en la biblioteca.")
-            return
-
-        libro = Libro(titulo, autor, isbn)
-        self.libros[isbn] = libro
-        print(f'Libro "{titulo}" agregado con éxito (ISBN: {isbn}).')
+        self.libros[nuevo_libro.isbn] = nuevo_libro
+        print(f'Libro "{nuevo_libro.titulo}" agregado con éxito (ISBN: {nuevo_libro.isbn}).')
 
     def prestar_libro(self, isbn):
         libro = self.libros.get(isbn)
@@ -114,13 +101,7 @@ if __name__ == "__main__":
         opcion = input("Elige una opción: ")
         
         if opcion == '1':
-            titulo = input("Título: ")
-            autor = input("Autor: ")
-            isbn = input("ISBN (Dejar en blanco para generar automáticamente): ")
-            if not isbn:
-                biblioteca.agregar_libro(titulo, autor)
-            else:
-                biblioteca.agregar_libro(titulo, autor, isbn)
+            biblioteca.agregar_libro()
 
         elif opcion == '2':
             isbn = input("ISBN del libro a prestar: ")
