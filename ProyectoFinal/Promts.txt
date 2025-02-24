@@ -1,0 +1,11 @@
+Por favor, toma el siguiente código y coméntalo completamente. Explica detalladamente cada parte del código, como las funciones, 
+métodos, argumentos, cómo interactúan entre sí y cualquier aspecto clave del código. Asegúrate de incluir ejemplosen los comentarios, 
+si es necesario para la explicacion, y mejora los comentarios existentes para convertir el código en una guía de estudio completa. 
+
+La explicación detallada de cada parte del código debe ir incluida dentro de este archivo .py, en forma de comentarios. 
+No la proporciones después del código, sino que integra toda la información dentro del mismo archivo. 
+
+Procura que el código y la explicación sean claros y comprensibles tanto para un principiante como para un usuario avanzado. 
+Enfócate en hacer que el conjunto del código y los comentarios sea lo más instructivo y útil posible. 
+
+codigo: 
