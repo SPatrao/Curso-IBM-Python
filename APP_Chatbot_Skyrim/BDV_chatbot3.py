@@ -16,7 +16,7 @@ from langsmith import Client
 # 📌 CONFIGURACIÓN INICIAL
 # ==================================
 # Configuración de LangSmith para monitoreo
-client = Client(api_key="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")
+client = Client(api_key="lsv2_pt_68dfff0cd6114dd48") #anade al api_key 734968a21c9fc8c_fd7ed10b44 
 
 # Configuración de la base de datos vectorial
 persist_directory = "db"
