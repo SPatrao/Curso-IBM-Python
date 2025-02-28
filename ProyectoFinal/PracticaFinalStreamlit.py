@@ -39,8 +39,8 @@ class Biblioteca:
         return str(self.isbn_counter)
 
     def validar_isbn(self, isbn):
-        # Validamos que sea un número y permitimos de 9 a 13 dígitos (formatos comunes de ISBN)
-        return isbn.isdigit() and (9 <= len(isbn) <= 13)
+        # Validamos que sea un número y permitimos de 9 a 10 dígitos (formatos comunes de ISBN)
+        return isbn.isdigit() and (9 <= len(isbn) <= 10)
 
     def agregar_libro(self, titulo, autor, isbn=None):
         if not titulo or not autor:
@@ -50,7 +50,7 @@ class Biblioteca:
             isbn = self.generar_isbn_continuo()
             mensaje_isbn = f"ISBN generado automáticamente: {isbn}"
         elif not self.validar_isbn(isbn):
-            return False, f"El ISBN debe ser un número de entre 9 y 13 dígitos. Recibido: '{isbn}' con {len(isbn)} dígitos."
+            return False, f"El ISBN debe ser un número de entre 9 y 10 dígitos. Recibido: '{isbn}' con {len(isbn)} dígitos."
         else:
             mensaje_isbn = ""
 
@@ -190,7 +190,7 @@ def main():
             
             # Campo ISBN
             if isbn_manual:
-                isbn = st.text_input("ISBN (9-13 dígitos):")
+                isbn = st.text_input("ISBN (9-10 dígitos):")
             else:
                 st.text_input("ISBN (se generará automáticamente):", disabled=True)
                 isbn = ""

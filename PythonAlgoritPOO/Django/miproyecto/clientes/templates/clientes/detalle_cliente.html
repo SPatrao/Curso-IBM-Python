@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Cliente</title>
+</head>
+<body>
+    <h1>{{ cliente.nombre }} {{ cliente.apellidos }}</h1>
+    <p>RFC: {{ cliente.rfc }}</p>
+    <p>Fecha de nacimiento: {{ cliente.fecha_nacimiento }}</p>
+    <p>Estado: {% if cliente.activo %}Activo{% else %}Inactivo{% endif %}</p>
+    <a href="{% url 'lista_clientes' %}">Volver a la lista</a>
+</body>
+</html>
