@@ -36,15 +36,27 @@ class Libro:
 biblioteca = []
 
 def agregar_libro():
-    titulo = input("Título: ").strip()  
-    autor = input("Autor: ").strip()  
     while True:
-        isbn = input("ISBN (mínimo 4 dígitos): ").strip() 
-        if len(isbn) >= 4 and isbn.isdigit():  
-            break 
-        print("Error: El ISBN debe contener al menos 4 dígitos numéricos.") 
-    nuevo_libro = Libro(titulo, autor, isbn)
-    Libro.agregar(biblioteca, nuevo_libro) 
+        titulo = input("Título: ").strip()  
+        autor = input("Autor: ").strip()  
+
+        if not titulo or not autor:  
+            print("Error: El título y el autor no pueden estar vacíos.")
+            continue 
+
+        while True:
+            isbn = input("ISBN (mínimo 4 dígitos): ").strip()
+            if len(isbn) >= 4 and isbn.isdigit():
+                if any(libro.isbn == isbn for libro in biblioteca):
+                    print(f"Error: El ISBN '{isbn}' ya existe en la biblioteca.")
+                else:
+                    break
+            else:
+                print(f"Error: El ISBN '{isbn}' debe contener al menos 4 dígitos numéricos.")
+        
+        nuevo_libro = Libro(titulo, autor, isbn)
+        Libro.agregar(biblioteca, nuevo_libro)
+        break
 
 def prestar_libro():
     isbn = input("ISBN del libro a prestar: ") 
