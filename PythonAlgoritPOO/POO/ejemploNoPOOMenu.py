@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import logging
+
 # Definimos una lista de clientes, donde cada cliente es un diccionario con Nombre, Apellidos y DNI
 clientes = [
     {'Nombre': 'Hector', 'Apellidos': 'Costa Guzman', 'dni': '11111111A'},
@@ -19,7 +21,8 @@ def mostrar_cliente(clientes):
         if dni == c['dni']:
             print('{} {}'.format(c['Nombre'], c['Apellidos']))
             return
-    print('Cliente no encontrado')
+    logging.error("Cliente no encontrado")
+    print(f"Cliente con ID {dni} no encontrado")
 
 def borrar_cliente(clientes):
     """
@@ -34,7 +37,8 @@ def borrar_cliente(clientes):
             del clientes[i]
             print(str(c), "> BORRADO")
             return
-    print('Cliente no encontrado')
+    logging.error("Cliente no encontrado")
+    print(f"Cliente con ID {dni} no encontrado")
 
 def agregar_cliente(clientes):
     """
