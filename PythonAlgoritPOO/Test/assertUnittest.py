@@ -152,3 +152,40 @@ class TestEjemplos(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+"""
+métodos de afirmación de UnitTest:
+Método                  Implementación
+assertEqual                 a == b
+assertNotEqual              a != b
+assertTrue                  bool(x) is True
+assertFalse                 bool(x) is False
+assertIs                    a is b
+assertIsNot                 a is not b
+assertIsNone                x is None
+assertIsNotNone             x is not None
+assertIn                    a in b
+assertNotIn                 a not in b
+assertIsInstance            is instance(a,b)
+assertNotIsInstance         not is instance(a,b)
+assertRaises                fun(*args,**kwds)
+raises                      exc
+assertRaisesRegexp          fun(*args,**kwds)
+raises                      exc(regex)
+assertAlmostEqual           round(a-b,7) == 0
+assertNotAlmostEqual        round(a-b,7) != 0
+assertGreater               a > b
+assertGreaterEqual          a >= b
+assertLess                  a < b
+assertLessEqual             a <= b
+assertRegexpMatches         r.search(s)
+assertNotRegexpMatches      not r.search(s)
+assertItemsEqual            sorted(a) == sorted(b)
+assertDictContainsSubset    all the key/value pairs in a exist in b
+assertMultiLineEqual        strings
+assertSequenceEqual         sequences
+assertListEqual             lists
+assertTupleEqual            tuples
+assertSetEqual              sets or frozensets
+assertDictEqual             dicts
+"""
