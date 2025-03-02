@@ -1,0 +1,74 @@
+https://acortar.link/8LXw4C
+
+Comandos Generales de Python  
+
+	python test.py 
+	streamlit run app.py 
+
+Comandos para Entornos Virtuales 
+ 
+	rmdir /s venv 
+	python -m venv venv 
+	venv\Scripts\activate 
+	Deactivate 
+
+Comandos para Gestión de Paquetes 
+ 
+	python.exe -m pip install --upgrade pip 
+	pip freeze > requirements.txt 
+	pip freeze >> requirements.txt 
+	pip install -r requirements.txt 
+	pip uninstall -r requirements.txt -y 
+
+Comandos para Django  
+
+	django-admin startproject miProyecto 
+	cd miProyecto 
+	python manage.py startapp clientes 
+	python manage.py makemigrations 
+	python manage.py migrate 
+	python manage.py runserver
+ 
+	python manage.py changepassword  
+
+Proyecto Django  
+
+Crear el proyecto: 
+	django-admin startproject miProyecto  
+	cd miProyecto  
+Crear una aplicación: 
+	python manage.py startapp clientes 
+Configurar el entorno virtual: 
+	python -m venv venv 
+	venv\Scripts\activate  
+Instalar Django y otras dependencias: 
+	pip install django  
+	pip install -r requirements.txt  
+
+Configurar la base de datos: 
+
+python manage.py makemigrations  
+python manage.py migrate  
+python manage.py createsuperuser  
+python manage.py runserver  
+pip freeze > requirements.txt  
+
+Resumen Orden recomendado:  
+Crear proyecto → Crear aplicación → Configurar entorno virtual → Instalar dependencias → Configurar base de datos → Iniciar servidor. 
+
+Pruebas Test
+
+Unittest :
+python -m unittest testcompleto.py
+
+Doctest :
+python -m doctest testcompleto.py
+
+PyTest :
+pytest testcompleto.py
+
+Nose2 :
+nose2 testcompleto
+
+Robot:
+robot testcompleto.robot
