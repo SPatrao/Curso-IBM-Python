@@ -2,6 +2,7 @@ import streamlit as st
 import csv
 import pandas as pd
 from io import StringIO
+import requests
 
 class Libro:
     def __init__(self, titulo, autor, isbn):
@@ -137,12 +138,14 @@ def main():
     # Inicializar la biblioteca
     biblioteca = inicializar_biblioteca()
     # Cargar libros iniciales desde un archivo CSV
+    url = 'https://raw.githubusercontent.com/RomanOsma/Curso-IBM-Python/main/ProyectoFinal/skyrim_books.csv'
     try:
-        with open('https://github.com/RomanOsma/Curso-IBM-Python/blob/main/ProyectoFinal/skyrim_books.csv', 'r', encoding='utf-8') as file:
-            contenido_csv = file.read()
-            biblioteca.cargar_libros_csv(contenido_csv)
-    except FileNotFoundError:
-        st.warning("Archivo CSV inicial no encontrado. Asegúrate de que el archivo 'Skyrim_book.csv' exista en la ruta especificada.")
+        response = requests.get(url)
+        response.raise_for_status()
+        contenido_csv = response.text
+        biblioteca.cargar_libros_csv(contenido_csv)
+    except requests.exceptions.RequestException as e:
+        st.warning(f"Error al cargar el archivo CSV desde la web: {e}")
     
     # Inicializar variables de estado si no existen
     if 'isbn_manual' not in st.session_state:
