@@ -125,6 +125,7 @@ def inicializar_biblioteca():
 
 # Aplicación Streamlit
 def main():
+
     st.set_page_config(
         page_title="Sistema de Gestión de Biblioteca",
         page_icon="📚",
@@ -135,6 +136,13 @@ def main():
     
     # Inicializar la biblioteca
     biblioteca = inicializar_biblioteca()
+    # Cargar libros iniciales desde un archivo CSV
+    try:
+        with open('https://github.com/RomanOsma/Curso-IBM-Python/blob/main/ProyectoFinal/skyrim_books.csv', 'r', encoding='utf-8') as file:
+            contenido_csv = file.read()
+            biblioteca.cargar_libros_csv(contenido_csv)
+    except FileNotFoundError:
+        st.warning("Archivo CSV inicial no encontrado. Asegúrate de que el archivo 'Skyrim_book.csv' exista en la ruta especificada.")
     
     # Inicializar variables de estado si no existen
     if 'isbn_manual' not in st.session_state:
