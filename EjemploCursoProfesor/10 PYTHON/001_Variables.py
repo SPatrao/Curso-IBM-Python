@@ -1,5 +1,5 @@
 # VARIABLES
-
+# ---> Prueba de git
 # Lo ideal es declara e inicializar siempre las variables.
 # -----------------------------------------------------------
 
